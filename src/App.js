@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import LoginPage from "./Components/LoginPage";
 
+import Navbar from "./Navbar";
+import union from "./Images/Union.png";
+import vector from "./Images/Vector.png";
+import notification from "./Images/notifi.png";
+import Sidebar from "./Components/Sidebar";
+import Dashboard from "./Dashboard";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Navbar logo={union} notification={notification} vector={vector} />
+      <div className="cha">
+        <Sidebar />
+        <Dashboard />
+      </div>
+      {/* <LoginPage /> */}
     </div>
   );
 }
